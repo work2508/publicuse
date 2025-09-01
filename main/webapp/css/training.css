@@ -1,0 +1,107 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	background-image: url('../img/pc.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	background-attachment: fixed;
+}
+
+@media screen and (max-width: 768px) {
+	body {
+		background-image: url('../img/mobile.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		background-attachment: fixed;
+	}
+}
+
+header {
+	background-color: #66BB6A;
+	color: white;
+	padding: 1rem;
+	box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	border-bottom-left-radius: 0.75rem;
+	border-bottom-right-radius: 0.75rem;
+	position: fixed;
+	top: 0;
+	left: 0;
+	width: 100%;
+	z-index: 10;
+}
+/* 「エクササイズ一覧」ヘッダーのスタイル */
+.exercise-list-header {
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    gap: 10px; /* アイコンとテキストの間の隙間 */
+    padding: 15px; /* 上下の余白 */
+    margin-bottom: 20px; /* 下のフォームとの隙間 */
+    background-color: transparent; /* 背景色を透明にして凹凸をなくす */
+    box-shadow: none; /* 影をなくす */
+}
+
+.exercise-list-header h1 {
+    font-size: 2em; /* 文字を大きく強調する (必要に応じて調整) */
+    font-weight: bold; /* 太字にする */
+    color: #333; /* 文字色 (任意) */
+    margin: 0; /* h1のデフォルトマージンをリセット */
+    padding: 0;
+    margin-top: 3rem; /	
+}
+
+.exercise-list-header .material-symbols-outlined {
+    font-size: 1.8em; /* アイコンのサイズを調整 */
+    color: #333; /* アイコンの色 (任意) */
+    margin-top: 3rem;
+}
+.form-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+.form-group {
+    display: flex;
+    flex-direction: column; /* これがラベルと入力欄を縦に並べる重要な部分です */
+    align-items: flex-start; /* 左寄せにする */
+    gap: 5px; /* ラベルと入力欄の隙間を調整 */
+    margin-bottom: 20px;
+}
+.form-group label {
+    font-weight: bold;
+}
+/* すべての入力要素に枠線を設定 */
+select,
+textarea,
+input[type="text"] {
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+}
+.register-button {
+    background-color: #66BB6A;
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+.register-button:hover {
+    background-color: #4CAF50;
+}
+
+.register-button:active {
+    transform: translateY(1px);
+}
+.button-container {
+    display: flex;
+    justify-content: flex-end; /* ボタンを右寄せにする */
+}

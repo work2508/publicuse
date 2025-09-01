@@ -1,0 +1,97 @@
+@charset "UTF-8";
+body {
+    background-color: #f0f4f8; /* 優しいグレーの背景 */
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+    text-align: center;
+    color: #4a5568;
+}
+
+.error-container {
+    padding: 2rem;
+    max-width: 350px;
+    background-color: #fff;
+    border-radius: 16px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.05);
+}
+
+.error-icon {
+    font-size: 4rem; /* アイコンのサイズ */
+    margin-bottom: 1rem;
+}
+
+.error-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+}
+
+.error-message {
+    font-size: 1rem;
+    line-height: 1.6;
+    margin-bottom: 1.5rem;
+    color: #718096;
+}
+
+.retry-button {
+    background-color: #63b3ed; /* パステル系の青 */
+    color: #fff;
+    border: none;
+    padding: 0.75rem 2rem;
+    border-radius: 9999px; /* 角丸を最大に */
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.retry-button:hover {
+    background-color: #4299e1;
+}
+/* button-groupは引き続きボタンを横並びにするために使います */
+.button-group {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 1.5rem; /* ボタン間のスペース */
+    margin-top: 2rem;
+}
+
+/* ボタンとリンクに共通のスタイル */
+.icon-button {
+    background-color: transparent; /* 背景を透明に */
+    border: 2px solid #a0aec0; /* 枠線 */
+    color: #4a5568;
+    border-radius: 50%; /* 円形にする */
+    width: 60px; /* ボタンのサイズ */
+    height: 60px;
+    display: flex; /* flexboxを使ってアイコンを中央に配置 */
+    justify-content: center;
+    align-items: center;
+    cursor: pointer;
+    text-decoration: none; /* リンクの下線を消す */
+    transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+}
+
+/* ホバー時のスタイル */
+.icon-button:hover {
+    background-color: #a0aec0;
+    color: #fff;
+    border-color: #a0aec0;
+}
+
+/* アイコン自体のサイズ調整 */
+.icon-button .material-symbols-outlined {
+    font-size: 28px;
+}
+
+/* Homeボタンの色を元のRefreshボタンの色に合わせる */
+/* もしHomeボタンの色だけを変えたい場合は、以下のスタイルを追加 */
+.home-button {
+    background-color: #63b3ed; /* 元の再読み込みボタンの青色 */
+    color: #fff;
+    border: none;
+}

@@ -1,0 +1,37 @@
+@charset "UTF-8";
+
+/* PC用のボディスタイル */
+body {
+    margin: 0;
+    background-image: url('../img/pc.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+/* 769px以上の画面に適用するスタイル */
+@media screen and (min-width: 769px) {
+    #calendar {
+        max-width: 800px !important;
+        margin: 0 auto !important;
+    }
+}
+@media screen and (min-width: 769px) {
+.calendar-container {
+    position: absolute; /* 親要素（body）を基準に配置 */
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%); /* コンテナを画面中央に配置 */
+    background-color: rgba(255, 255, 255, 0.8); /* 半透明の背景色でカレンダーを見やすくする */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    /* カレンダーのサイズを調整 */
+    width: 800px;
+    max-width: 90%;
+}
+}
+h1 {
+    text-align: left;
+}

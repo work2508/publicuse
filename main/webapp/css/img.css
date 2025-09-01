@@ -1,0 +1,152 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	background-image: url('../img/pc.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* 画面をスクロールしても背景を固定する場合 */
+	background-attachment: fixed;
+}
+
+/* --- ここからスマホ用の設定 --- */
+/* スマホ（画面幅が768px以下）の場合の背景画像 */
+@media screen and (max-width: 768px) {
+	body {
+		background-image: url('../img/mobile.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		/* 画面をスクロールしても背景を固定する場合 */
+		background-attachment: fixed;
+	}
+}
+/* フッターリンクのスタイル */
+.footer-links {
+	display: flex; /* 横並びにする */
+	justify-content: space-around; /* 均等な間隔で配置 */
+	/* 画面下に固定する */
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white; /* 背景色を設定 */
+	padding: 10px 0;
+	border-top: 1px solid #ccc; /* 上に線を追加 */
+}
+
+/* リンクのスタイル */
+.footer-links p {
+	margin: 0; /* pタグのデフォルトの余白をなくす */
+	}
+
+/* 標準のラジオボタンを非表示にする */
+input[type="radio"] {
+  display: none;
+}
+
+/* ラベルのスタイルを定義 */
+label {
+  display: inline-block;
+  cursor: pointer;
+  padding: 10px 15px; /* ラジオボタンのサイズとパディング */
+  background-color: #56A3D3; /* <-- ここに背景色を追加 */
+  border: 2px solid #56A3D3;
+  border-radius: 20px;
+  position: relative;
+  transition: all 0.3s ease;
+  color: black;
+}
+
+/* 選択されたラベルのスタイル */
+input[type="radio"]:checked + label {
+  background-color: #1549B0; /* 青い背景色 */
+  color: rgb(0, 0, 0); /* 文字色を白に */
+  border-color: #1549B0;
+}
+
+/* ラベルの上にマウスを置いた時のスタイル */
+label:hover {
+  background-color: rgb(0, 128, 255);
+  border-color: rgb(0, 128, 255);
+}
+
+/* ラジオボタンを横並びにするコンテナのスタイル */
+.parts-selector,
+.type-selector {
+  display: flex;
+  justify-content: center;
+  gap: 15px;
+  flex-wrap: wrap;
+  }
+  
+ .fixed-icon {
+    position: fixed; /* <-- これで画面に固定される */
+    bottom: 20px;   /* <-- 画面の下から20pxの位置 */
+    right: 20px;    /* <-- 画面の右から20pxの位置 */
+    z-index: 1000;  /* <-- 他の要素の上に表示されるようにする */
+}
+.fixed-button-container {
+    position: fixed; /* <-- 画面に固定する */
+    bottom: 100px;  /* <-- 画面下部から100pxの位置 */
+    left: 50%;      /* <-- 左から50%の位置 */
+    transform: translateX(-50%); /* <-- 自身を左に50%移動させて中央に配置 */
+    width: 100%;    /* <-- 親要素の幅を100%に */
+    text-align: center; /* <-- ボタンを中央に */
+    z-index: 999; /* <-- 他の要素の上に表示されるようにする */
+}
+
+/* 一覧表示ボタンのスタイル */
+.cute-button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 12px 24px;
+    font-size: 16px;
+    font-weight: bold;
+    border: none;
+    border-radius: 8px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: background-color 0.3s, transform 0.1s;
+}
+
+.cute-button:hover {
+    background-color: #45a049;
+}
+
+.cute-button:active {
+    transform: translateY(2px);
+}
+/* 戻るアイコンのスタイル */
+.back-icon-link {
+  position: fixed; /* 画面上の特定の場所に固定 */
+  top: 20px;         /* 上からの位置 */
+  left: 20px;        /* 左からの位置 */
+  color: #333;       /* アイコンの色 */
+  text-decoration: none; /* 下線をなくす */
+  z-index: 1000;     /* 他の要素の上に表示 */
+}
+
+.back-icon {
+  font-size: 32px; /* アイコンのサイズ */
+}
+.register-button {
+    background-color: #66BB6A; /* 可愛らしい緑色 */
+    color: white;
+    padding: 12px 24px;
+    font-size: 18px;
+    font-weight: bold;
+    border: none;
+    border-radius: 25px; /* 角を丸くする */
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); /* 影を追加 */
+    cursor: pointer;
+    transition: background-color 0.3s ease; /* ホバー時のアニメーション */
+    margin-top: 20px; /* 上部に少し余白 */
+}
+
+.register-button:hover {
+    background-color: #4CAF50; /* ホバーで少し濃い緑色 */
+}
+
+.register-button:active {
+    transform: translateY(1px); /* クリック時に少し沈むエフェクト */
+}

@@ -1,0 +1,269 @@
+@charset "UTF-8";
+body {
+	margin: 0;
+	background-image: url('../img/pc.png');
+	background-size: cover;
+	background-position: center;
+	background-repeat: no-repeat;
+	/* 画面をスクロールしても背景を固定する場合 */
+	background-attachment: fixed;
+}
+
+/* --- ここからスマホ用の設定 --- */
+/* スマホ（画面幅が768px以下）の場合の背景画像 */
+@media screen and (max-width: 768px) {
+	body {
+		background-image: url('../img/mobile.png');
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
+		/* 画面をスクロールしても背景を固定する場合 */
+		background-attachment: fixed;
+	}
+}	
+/* フッターリンクのスタイル */
+.footer-links {
+	display: flex; /* 横並びにする */
+	justify-content: space-around; /* 均等な間隔で配置 */
+	/* 画面下に固定する */
+	position: fixed;
+	bottom: 0;
+	width: 100%;
+	background-color: white; /* 背景色を設定 */
+	padding: 10px 0;
+	border-top: 1px solid #ccc; /* 上に線を追加 */
+}
+
+/* リンクのスタイル */
+.footer-links p {
+	margin: 0; /* pタグのデフォルトの余白をなくす */
+	}
+
+.profile {
+  background: #FFF;
+  width: 300px;
+  padding: 2rem;
+  border: 1px solid #1a1a1a;
+}
+
+.profile__img {
+  display: block;
+  width: 160px;
+  height: 160px;
+  border-radius:50%;
+  margin: 0 auto;
+}
+
+.profile__name {
+  text-align:center;
+  font-weight:bold;
+  font-size:1.2rem;
+  margin: 1rem auto 1rem;
+  letter-spacing:.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center; /* コンテンツを中央揃えにする */
+  gap: 10px; /* 名前とアイコンの間に隙間を空ける */
+}
+.profile__desc {
+  line-height:1.6rem;
+}
+.profile-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh; /* 画面の高さいっぱいに広げる */
+}
+
+/* 戻るアイコンのスタイル */
+.back-icon-link {
+  position: absolute; /* 画面上の特定の場所に固定 */
+  top: 20px;         /* 上からの位置 */
+  left: 20px;        /* 左からの位置 */
+  color: #333;       /* アイコンの色 */
+  text-decoration: none; /* 下線をなくす */
+  z-index: 1000;     /* 他の要素の上に表示 */
+}
+
+.back-icon {
+  font-size: 32px; /* アイコンのサイズ */
+}
+
+/* 既存のプロフィールのスタイル */
+.profile {
+  background: #FFF;
+  width: 300px;
+  padding: 2rem;
+  border: 1px solid #1a1a1a;
+  /* プロフィール名とアイコンを横並びにする */
+}
+.password-input-container {
+    position: relative;
+}
+
+.toggle-password-icon {
+    position: absolute;
+    right: 15px; /* 右端からの距離 */
+    top: 50%;
+    transform: translateY(-50%);
+    cursor: pointer;
+    color: #888;
+}
+
+
+
+/* リンクのスタイル */
+.edit-link {
+    /* リンクの下線や色をリセット */
+    text-decoration: none;
+    color: #4a5568; /* アイコンの色 */
+    transition: color 0.3s ease;
+}
+
+/* ホバー時のスタイル */
+.edit-link:hover {
+    color: #007bff; /* マウスオーバーで色を変える */
+}
+
+/* アイコン自体のスタイル */
+.edit-link .material-symbols-outlined {
+    font-size: 20px; /* アイコンのサイズ */
+}
+/* フォームグループのスタイル */
+.form-group {
+    margin-bottom: 20px;
+}
+.form-group .form-control {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box;
+    padding-right: 40px; /* アイコンのスペースを確保 */
+}
+.form-group label {
+    display: block;
+    margin-bottom: 8px;
+    font-weight: bold;
+    color: #555;
+}
+
+.form-group input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 8px;
+    box-sizing: border-box; /* パディングとボーダーを幅に含める */
+}
+
+/* 送信ボタンのスタイル */
+.submit-button {
+    width: 100%;
+    padding: 12px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 8px;
+    font-size: 16px;
+    cursor: pointer;
+    transition: background-color 0.3s;
+    text-decoration: none; /* 下線を消す */
+}
+
+.submit-button:hover {
+    background-color: #0056b3;
+}
+
+/* エラーメッセージのスタイル */
+.error-list {
+    list-style: none;
+    padding: 0;
+    margin-bottom: 15px;
+    color: red;
+    font-weight: bold;
+}
+/* 確認画面のメッセージ */
+.confirm-message {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #555;
+}
+
+/* 確認画面の項目と値のスタイル */
+.confirm-value {
+    font-size: 1.1rem;
+    font-weight: bold;
+    margin-top: 0;
+    margin-bottom: 1.5rem;
+}
+.return-link {
+    display: block;
+    margin-top: 1.5rem;
+    text-align: center;
+    color: #007bff;
+    text-decoration: none;
+}
+
+.return-link:hover {
+    text-decoration: underline;
+}
+/* 完了画面のタイトルとメッセージ */
+.complete-title {
+    text-align: center;
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.complete-message {
+    text-align: center;
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 2rem;
+}
+.button-right {
+    text-align: right;
+    margin-top: 20px; /* 必要に応じて調整 */
+}
+.delete-button {
+  display: inline-block;
+  padding: 10px 20px; /* 同じパディングを設定 */
+  border-radius: 25px;
+  background-color: #dc3545;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.delete-button:hover {
+  background-color: #c82333;
+}
+
+.cancel-button {
+  display: inline-block;
+  padding: 10px 20px; /* 同じパディングを設定 */
+  border-radius: 25px;
+  background-color: #6c757d;
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  text-align: center;
+  transition: background-color 0.3s ease;
+  border: none;
+  cursor: pointer;
+}
+
+.cancel-button:hover {
+  background-color: #5a6268;
+}
+
+/* ボタンをまとめるためのFlexboxコンテナ */
+.button-group {
+  display: flex;
+  justify-content: center;
+  gap: 15px; /* ボタン間のスペースを調整 */
+  margin-top: 20px;
+}

@@ -1,0 +1,98 @@
+	@charset "UTF-8";
+	body {
+	    margin: 0;
+	    background-image: url('../img/loginpc.PNG');
+	    background-size: cover;
+	    background-position: center;
+	    background-repeat: no-repeat;
+	    background-attachment: fixed;
+	}
+	.login-group-container {
+    display: flex;
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    gap: 20px; /* 入力欄とボタンの間の余白 */
+    
+    /* 画面の中央に配置するためのマージンを調整 */
+    margin-top: 60vh; /* 上からの余白で位置を調整 */
+    margin-bottom: auto; /* 下の要素との距離を考慮 */
+}
+/* 入力欄のグループ */
+.input-fields-group {
+    display: flex;
+    gap: 80px; /* ユーザーIDとパスワードの間の余白 */
+}
+
+/* 各入力欄のグループ */
+.input-group {
+    display: flex;
+    flex-direction: column;
+    gap: 5px;
+}
+	
+	/* ボタンを右下に配置するためのコンテナ */
+	.login-button-container {
+	    display: flex;
+	    justify-content: flex-end; /* ボタンを右寄せにする */
+	    margin-top: 10px;          /* 必要に応じて上の余白を調整 */
+	    margin-left: 20px; /* 入力フォームとボタンの間に余白を作る */
+	    width: 250px;              /* テーブルの幅に合わせる */
+	}
+	
+	/* ボタン自体のスタイル */
+	.login-button {
+	    display: flex;
+	    align-items: center;
+	    gap: 5px;
+	    padding: 8px 15px;
+	    background-color: rgb(0, 128, 255);
+	    color: white;
+	    border: none;
+	    border-radius: 20px;
+	    cursor: pointer;
+	    margin-top: 20px; /* 入力欄との縦方向の余白を調整 */
+	}
+	
+	.login-form-container {
+	    display: flex;
+	    flex-direction: row; /* 要素を横に並べる */
+	    align-items: center; /* 垂直方向の中央揃え */
+	    justify-content: center; /* 水平方向の中央揃え */
+	    margin-left: 20px; /* 入力フォームとボタンの間の余白 */
+	    gap: 80px; /* ここで入力フィールド間の隙間を設定します */
+	}
+	
+	.input-group {
+    display: flex;
+    flex-direction: column; /* ユーザーIDと入力欄を縦に並べる */
+    gap: 5px; /* ラベルと入力欄の間の余白 */
+}
+	
+	/* 新規会員登録ボタンのスタイル（PC用） */
+	.register-button {
+	    display: flex;
+	    align-items: center;
+	    gap: 5px;
+	    justify-content: center;
+	    padding: 10px 20px;
+	    background-color: #28a745;
+	    color: white;
+	    text-decoration: none;
+	    border-radius: 5px;
+	    font-weight: bold;
+	    width: fit-content;
+	    margin: 15px auto;
+	}
+	.fixed-button-container {
+	    position: fixed; /* 画面に対して位置を固定する */
+	    bottom: 20px;    /* 画面下端から20px上に配置 */
+	    left: 50%;       /* 画面の水平方向の中心に配置 */
+	    transform: translateX(-50%); /* ボタン自体の幅を考慮して、正確に中央に配置 */
+	    width: 100%;     /* 親要素の幅を100%に設定 */
+	    text-align: center; /* ボタン内のテキストを中央揃えにする */
+	}
+	h1 img {
+    height: 50px; /* 画像の高さを調整 */
+    vertical-align: middle; /* テキストと画像を垂直方向に中央揃え */
+    margin: 0 10px; /* 左右の余白を調整 */
+}

@@ -1,0 +1,23 @@
+@charset "UTF-8";
+/* フッターリンクのスタイル */
+.footer-links {
+    display: flex;
+    justify-content: space-around;
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    width: 100%;
+    background-color: white;
+    padding: 10px 0;
+    border-top: 1px solid #ccc;
+    z-index: 1000; /* カレンダーなど他の要素より前面に表示 */
+}
+/* リンク内のテキストスタイル */
+.footer-links a {
+    text-decoration: none;
+    color: black;
+}
+.footer-links a:hover {
+    color: black;
+    text-decoration: none;
+}

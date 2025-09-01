@@ -1,0 +1,94 @@
+/* モーダルの背景とコンテナ */
+.modal-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity 0.3s ease, visibility 0.3s ease;
+    z-index: 1000;
+}
+.modal-container.active {
+    visibility: visible;
+    opacity: 1;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+/* モーダルの白い枠 */
+.modal-body {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    max-width: 90%;
+    max-height: 90%;
+    overflow-y: auto;
+    width: 300px;
+    position: relative;
+}
+
+/* 見出しのスタイル */
+.modal-body h2 {
+    font-size: 1em;
+}
+
+/* 各項目（重量、回数など）の横並び設定 */
+.modal-body p {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    margin-bottom: 5px;
+}
+
+/* プルダウン、テキストフィールド、テキストエリアの共通スタイル */
+.modal-body select,
+.modal-body input,
+.modal-body textarea {
+    /* 枠線と角の丸み */
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    box-sizing: border-box;
+    /* 影を追加 */
+    box-shadow: inset 0 1px 2px rgba(0, 0, 0, 0.075);
+}
+
+/* プルダウンと入力フィールドの個別スタイル */
+.modal-body select,
+.modal-body input[type="text"] {
+    /* 高さとパディングを調整して縦枠を狭くする */
+    padding: 4px 12px;
+    /* 幅を柔軟に広げる */
+    flex-grow: 1;
+    /* 高さを固定する */
+    height: 30px;
+}
+
+/* テキストエリアの個別スタイル */
+.modal-body textarea {
+    padding: 5px 10px;
+    height: 50px;
+    resize: vertical;
+    flex-grow: 1;
+}
+
+/* ボタンを右寄せにするコンテナ */
+.form-actions {
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 10px;
+}
+
+/* 保存ボタンのスタイル */
+.save-button {
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    cursor: pointer;
+}

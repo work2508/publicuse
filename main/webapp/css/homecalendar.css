@@ -1,0 +1,14 @@
+/* カレンダーを背景の上に重ねるコンテナ */
+.calendar-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 10px;
+    border-radius: 5px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    width: 95%;
+    max-height: 80vh; /* 画面の高さの80%を最大値にする */
+    overflow-y: auto; /* 必要に応じてスクロール可能にする */
+}
