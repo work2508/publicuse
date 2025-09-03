@@ -48,12 +48,12 @@
 
 			<form action="${pageContext.request.contextPath}/edit" method="post">
 				<div class="form-group">
-					<label for="editName">お名前</label> <input type="text" id="editName"
+					<label for="editName">Name</label> <input type="text" id="editName"
 						name="editName" value="${user.name}" placeholder="1～10文字">
 				</div>
 
 				<div class="form-group password-group">
-					<label for="editPassword">パスワード</label>
+					<label for="editPassword">Password</label>
 					<div class="password-input-container">
 						<input type="password" id="editPassword" name="editPassword"
 							placeholder="2～10文字"> <span

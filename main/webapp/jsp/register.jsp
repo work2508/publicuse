@@ -79,7 +79,7 @@
 				
 				<div class="button-group">
 					<button type="submit" class="button create-button">
-					CreateMyAccount
+					新規作成
 					</button>
 				</div>
 			</form>

@@ -36,6 +36,12 @@
 <body>
 <!-- Header -->
 <jsp:include page="/jsp/header.jsp" />
+
+<div class="select-list-header">
+		<span class="material-symbols-outlined">fitness_center</span>
+		<h1>select</h1>
+		<span class="material-symbols-outlined">fitness_center</span>
+	</div>
 	
 	<c:if test="${not empty errorMsgList}">
 	    <div style="color: red; margin-bottom: 10px; text-align: center; padding-top: 80px;">

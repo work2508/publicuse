@@ -7,6 +7,7 @@ body {
 	background-repeat: no-repeat;
 	/* 画面をスクロールしても背景を固定する場合 */
 	background-attachment: fixed;
+  padding-top: 60px; /* 固定ヘッダーの高さに応じて調整 */
 }
 
 /* --- ここからスマホ用の設定 --- */
@@ -19,7 +20,34 @@ body {
 		background-repeat: no-repeat;
 		/* 画面をスクロールしても背景を固定する場合 */
 		background-attachment: fixed;
+    padding-top: 60px; /* 固定ヘッダーの高さに応じて調整 */
 	}
+}
+/* 「SELECT」ヘッダーのスタイル */
+.select-header {
+    display: flex; /* アイコンとテキストを横並びにする */
+    align-items: center; /* 垂直方向の中央揃え */
+    justify-content: center; /* 水平方向の中央揃え */
+    gap: 10px; /* アイコンとテキストの間の隙間 */
+    padding: 15px; /* 上下の余白 */
+    margin-bottom: 20px; /* 下のフォームとの隙間 */
+    background-color: transparent; /* 背景色を透明にして凹凸をなくす */
+    box-shadow: none; /* 影をなくす */
+}
+
+.select-header h1 {
+    font-size: 2em; /* 文字を大きく強調する (必要に応じて調整) */
+    font-weight: bold; /* 太字にする */
+    color: #333; /* 文字色 (任意) */
+    margin: 0; /* h1のデフォルトマージンをリセット */
+    padding: 0;
+    margin-top: 3rem; /	
+}
+
+.select-header .material-symbols-outlined {
+    font-size: 1.8em; /* アイコンのサイズを調整 */
+    color: #333; /* アイコンの色 (任意) */
+    margin-top: 3rem;
 }
 /* フッターリンクのスタイル */
 .footer-links {

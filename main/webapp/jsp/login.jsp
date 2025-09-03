@@ -46,10 +46,10 @@
 				
 				<div class="input-group">
 
-					<label>UserID</label> <input type="text" name="loginId">
+					<label>LoginID</label> <input type="text" name="loginId">
 				</div>
 				<div class="input-group">
-					<label>PASSWORD</label> <input type="password" name="password">
+					<label>Password</label> <input type="password" name="password">
 				</div>
 			</div>
 			
@@ -61,7 +61,7 @@
 	<div class="fixed-button-container">
 		<a href="${pageContext.request.contextPath}/register"
 		class="register-button"> <span class="material-symbols-outlined">person_add</span>
-		Sign up here!
+		新規会員登録
 		</a>
 	</div>
 </body>

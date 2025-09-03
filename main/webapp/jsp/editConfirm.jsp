@@ -31,12 +31,12 @@
 			<form action="${pageContext.request.contextPath}/editConfirm"
 				method="post">
 				<div class="form-group">
-					<label>お名前</label>
+					<label>Name</label>
 					<p class="confirm-value"><c:out value="${editName}" /></p>
 					<input type="hidden" name="editName" value="${editName}">
 				</div>
 				<div class="form-group">
-					<label>パスワード</label>
+					<label>Password</label>
 					<p class="confirm-value">••••••••</p>
 					<input type="hidden" name="editPassword" value="${editPassword}">
 				</div>
